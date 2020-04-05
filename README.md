@@ -1,27 +1,18 @@
-# CursoAngular
+# Clase 1: HTML
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
+## OBJETIVOS:
 
-## Development server
+1. Crear cuenta de GitHub.
+2. Agregar remoto y pushear.
+3. Crear una nueva rama.
+4. Aprender (repasar) Html.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## ORGANIZACION:
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1. Crear una cuenta de GitHub desde la pagina (hacer de tarea en lo posible).
+2. Agregar el remoto creado.
+3. Hacer primer commit y push.
+4. Crear nueva rama.
+5. Explicacion de archivos (si se requiere, solo para dar una idea del modelo MVC).
+6. W3 School. Explicar index.html.
+7. Seguir tutorial de w3 school (lo + relevante).
