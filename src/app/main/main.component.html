@@ -21,11 +21,11 @@
 
   <br />
   <br />
-  <div *ngFor="let peli of arregloPeliculas" class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">{{ peli.titulo }}</h5>
-      <h6 class="card-subtitle mb-2 text-muted">{{ peli.categoria }}</h6>
-      <a href="#" class="card-link">{{ peli.link }}</a>
-    </div>
-  </div>
+  <app-card
+    *ngFor="let peli of arregloPeliculas"
+    [titulo]="peli.titulo"
+    [subtitulo]="peli.categoria"
+    [link]="peli.link"
+  >
+  </app-card>
 </div>
