@@ -20,7 +20,7 @@
   </button>
 
   <div class="alert alert-danger mt-1" role="alert" *ngIf="mensaje">
-    Se ha marcado {{ mensaje }}
+    Se ha marcado {{ mensaje | uppercase }}
   </div>
 
   <br />
@@ -30,6 +30,7 @@
     [titulo]="peli.titulo"
     [subtitulo]="peli.categoria"
     [link]="peli.link"
+    [creado]="peli.creado"
     (marcado)="peliMarcada($event)"
   >
   </app-card>

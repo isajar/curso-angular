@@ -9,10 +9,12 @@ export class CardComponent implements OnInit {
   @Input() titulo: string;
   @Input() subtitulo: string;
   @Input() link: string;
+  @Input() creado: Date;
 
   @Output() marcado = new EventEmitter<string>();
 
   leido = false;
+
   constructor() {}
 
   ngOnInit() {}
