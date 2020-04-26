@@ -1,24 +1,31 @@
 <div class="container">
-  <label>Nombre y apellido</label>
-  <input type="text" class="form-control" [(ngModel)]="nombre" />
-  <p *ngIf="!nombre">Por favor escriba un nombre!</p>
+  <!-- Titulo -->
+  <label class="font-weight-bold">Titulo* </label>
+  <input type="text" class="form-control" [(ngModel)]="titulo" />
+  <p *ngIf="!titulo" class="text-danger">Por favor escriba un titulo!</p>
   <br />
-  <button
-    type="submit"
-    class="btn btn-primary"
-    [disabled]="!nombre"
-    (click)="enviar()"
-  >
-    Enviar
+  <!-- Categoria -->
+  <label class="font-weight-bold">Categoria*</label>
+  <input type="text" class="form-control" [(ngModel)]="categoria" />
+  <p *ngIf="!categoria" class="text-danger">Por favor escriba una categoria!</p>
+  <br />
+  <!-- Link -->
+  <label class="font-weight-bold">Link*</label>
+  <input type="text" class="form-control" [(ngModel)]="link" />
+  <p *ngIf="!link" class="text-danger">Por favor escriba un link!</p>
+  <br />
+
+  <button type="submit" class="btn btn-primary" (click)="guardar()">
+    Guardar
   </button>
-  <ng-template #mensaje>
-    <p>Por favor escriba un nombre!</p>
-  </ng-template>
+
   <br />
   <br />
-  <ul class="list-group" *ngIf="enviado">
-    <li class="list-group-item" *ngFor="let _nombre of arregloNombres">
-      {{ _nombre }}
-    </li>
-  </ul>
+  <div *ngFor="let peli of arregloPeliculas" class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{ peli.titulo }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ peli.categoria }}</h6>
+      <a href="#" class="card-link">{{ peli.link }}</a>
+    </div>
+  </div>
 </div>
