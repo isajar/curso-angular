@@ -25,13 +25,16 @@
 
   <br />
   <br />
-  <app-card
-    *ngFor="let peli of arregloPeliculas"
-    [titulo]="peli.titulo"
-    [subtitulo]="peli.categoria"
-    [link]="peli.link"
-    [creado]="peli.creado"
-    (marcado)="peliMarcada($event)"
-  >
-  </app-card>
+  <div class="row">
+    <div class="col" *ngFor="let peli of arregloPeliculas">
+      <app-card
+        [titulo]="peli.titulo"
+        [subtitulo]="peli.categoria"
+        [link]="peli.link"
+        [creado]="peli.creado"
+        (marcado)="peliMarcada($event)"
+      >
+      </app-card>
+    </div>
+  </div>
 </div>
