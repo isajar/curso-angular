@@ -10,6 +10,8 @@ export class CardComponent implements OnInit {
   @Input() subtitulo: string;
   @Input() link: string;
 
+  @Output() marcado = new EventEmitter<string>();
+
   leido = false;
   constructor() {}
 
@@ -17,5 +19,6 @@ export class CardComponent implements OnInit {
 
   marcar() {
     this.leido = !this.leido;
+    this.marcado.emit(this.titulo);
   }
 }

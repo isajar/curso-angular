@@ -12,8 +12,9 @@ export class MainComponent implements OnInit {
   titulo: string;
   categoria: string;
   link: string;
+  mensaje: string;
   arregloPeliculas: Array<Pelicula> = [];
-  enviado = false;
+
   constructor() {}
 
   ngOnInit() {}
@@ -25,7 +26,11 @@ export class MainComponent implements OnInit {
   resetFormulario() {
     this.titulo = this.categoria = this.link = "";
   }
-  isEnviado() {
-    return this.enviado;
+
+  peliMarcada(event: string) {
+    this.mensaje = event;
+    setTimeout(() => {
+      this.mensaje = "";
+    }, 3000);
   }
 }
