@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Alumno } from "./models/alumno.model";
 
 @Component({
   selector: "app-root",
@@ -18,6 +19,17 @@ export class AppComponent {
     url: "https://github.com/isajar",
     materias_en_curso: ["Calculo I", "Fisica I", "Algebra"],
   };
+  alumno2: Alumno = new Alumno(
+    456,
+    "isa",
+    "isa@isa.com",
+    "avatar",
+    10,
+    "ingenieria",
+    "regular",
+    "url",
+    ["m1", "m2"]
+  );
   modificarTexto() {
     this.title = "Nuevo Titulo";
   }

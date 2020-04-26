@@ -1,0 +1,24 @@
+<div class="container">
+  <label>Nombre y apellido</label>
+  <input type="text" class="form-control" [(ngModel)]="nombre" />
+  <p *ngIf="!nombre">Por favor escriba un nombre!</p>
+  <br />
+  <button
+    type="submit"
+    class="btn btn-primary"
+    [disabled]="!nombre"
+    (click)="enviar()"
+  >
+    Enviar
+  </button>
+  <ng-template #mensaje>
+    <p>Por favor escriba un nombre!</p>
+  </ng-template>
+  <br />
+  <br />
+  <ul class="list-group" *ngIf="enviado">
+    <li class="list-group-item" *ngFor="let _nombre of arregloNombres">
+      {{ _nombre }}
+    </li>
+  </ul>
+</div>

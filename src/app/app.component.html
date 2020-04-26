@@ -1,35 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align: center;">
-  <h1>Welcome to {{ title }}!</h1>
-  <img width="300" alt="Angular Logo" [src]="alumno.avatar" />
-  <button (click)="modificarTexto()">Modificar</button>
-</div>
+<app-header></app-header>
 
-<div>
-  <input type="email" name="" id="" [(ngModel)]="alumno.email" />
-</div>
+<app-main></app-main>
 
-<h2>{{ alumno.email }}</h2>
-<ul>
-  <li>
-    <h2>
-      <a target="_blank" rel="noopener" [href]="alumno.url">URL</a>
-    </h2>
-  </li>
-  <li>
-    <h2>
-      <a target="_blank" rel="noopener" href="https://angular.io/cli"
-        >CLI Documentation</a
-      >
-    </h2>
-  </li>
-  <li>
-    <h2>
-      <a target="_blank" rel="noopener" href="https://blog.angular.io/"
-        >Angular blog</a
-      >
-    </h2>
-  </li>
-</ul>
+<app-footer></app-footer>
 
 <router-outlet></router-outlet>
