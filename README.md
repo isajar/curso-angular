@@ -1,24 +1,22 @@
-# Clase 6 PIPES:
+# Clase 7 SERVICIOS:
 
 ## OBJETIVOS:
 
-- Aprender a usar pipes para darle formato a los valores de salida.
+- Aprender a usar SERVICIOS como forma de centralizar informacion.
 
 ## ORGANIZACION:
 
 0. Crear una nueva rama.
-1. Agregar a la clase pelicula un atributo creado (Date).
-2. Agregar el input de creado en el template de Card y utilizar un pipe de date
-3. Utilizar pipe TitleCase para el Titulo
-4. Utilizar pipe Uppercase para categoria.
-5. Utilizar pipe UpperCase para mensaje.
-6. Acomodar cards para que se muestren en columnnas.
-7. Pasar la info de las cards a una tabla.
-8. Dar opcion de cambio de vista (cards - tabla) al usuario.
+1. Crear un servicio dentro de la carpeta services/.
+2. Crear el arreglo de peliculas dentro del servicio.
+3. Crear funcion para iniciar el arreglo.
+4. Crear funcion para obtener todas las peliculas.
+5. Crear funcion para guardar peliculas.
 
 ## Observaciones:
 
+"Components shouldn't fetch or save data directly and they certainly shouldn't knowingly present fake data. They should focus on presenting data and delegate data access to a service." - Angular Doc.
+
 ## LINKS DE INTERES
 
-- [Bootstrap] `https://getbootstrap.com/docs/4.4/getting-started/introduction/`
-- [AngularDocs] `https://angular.io/docs`
+- [Angular] https://angular.io/tutorial/toh-pt4
