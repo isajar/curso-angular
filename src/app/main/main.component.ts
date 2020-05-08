@@ -1,6 +1,7 @@
 // tslint:disable: quotemark
 import { Component, OnInit } from "@angular/core";
 import { Pelicula } from "../models/pelicula.model";
+import { PeliculaService } from "../services/pelicula.service";
 
 @Component({
   selector: "app-main",
@@ -15,12 +16,17 @@ export class MainComponent implements OnInit {
   mensaje: string;
   arregloPeliculas: Array<Pelicula> = [];
 
-  constructor() {}
+  constructor(private peliculasService: PeliculaService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.arregloPeliculas = this.peliculasService.getAllPeliculas();
+  }
   guardar() {
-    const pelicula = new Pelicula(this.titulo, this.categoria, this.link);
-    this.arregloPeliculas.push(pelicula);
+    this.arregloPeliculas = this.peliculasService.setPelicula(
+      this.titulo,
+      this.categoria,
+      this.link
+    );
     this.resetFormulario();
   }
   resetFormulario() {
