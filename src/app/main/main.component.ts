@@ -32,11 +32,4 @@ export class MainComponent implements OnInit {
   resetFormulario() {
     this.titulo = this.categoria = this.link = "";
   }
-
-  peliMarcada(event: string) {
-    this.mensaje = event;
-    setTimeout(() => {
-      this.mensaje = "";
-    }, 3000);
-  }
 }

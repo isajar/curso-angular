@@ -1,0 +1,15 @@
+<div class="alert alert-danger mt-2" role="alert" *ngIf="mensaje">
+  Se ha marcado {{ mensaje | uppercase }}
+</div>
+<div class="row mt-3">
+  <div class="col" *ngFor="let peli of peliculas">
+    <app-card
+      [titulo]="peli.titulo"
+      [subtitulo]="peli.categoria"
+      [link]="peli.link"
+      [creado]="peli.creado"
+      (marcado)="peliMarcada($event)"
+    >
+    </app-card>
+  </div>
+</div>

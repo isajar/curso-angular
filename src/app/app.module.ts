@@ -8,6 +8,8 @@ import { MainComponent } from "./main/main.component";
 import { FooterComponent } from "./footer/footer.component";
 import { CardComponent } from "./card/card.component";
 import { PeliculaService } from "./services/pelicula.service";
+import { NavbarComponent } from './navbar/navbar.component';
+import { VistaTarjetaComponent } from './vista-tarjeta/vista-tarjeta.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { PeliculaService } from "./services/pelicula.service";
     MainComponent,
     FooterComponent,
     CardComponent,
+    NavbarComponent,
+    VistaTarjetaComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [PeliculaService],

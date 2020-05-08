@@ -18,23 +18,4 @@
   <button type="submit" class="btn btn-primary" (click)="guardar()">
     Guardar
   </button>
-
-  <div class="alert alert-danger mt-1" role="alert" *ngIf="mensaje">
-    Se ha marcado {{ mensaje | uppercase }}
-  </div>
-
-  <br />
-  <br />
-  <div class="row">
-    <div class="col" *ngFor="let peli of arregloPeliculas">
-      <app-card
-        [titulo]="peli.titulo"
-        [subtitulo]="peli.categoria"
-        [link]="peli.link"
-        [creado]="peli.creado"
-        (marcado)="peliMarcada($event)"
-      >
-      </app-card>
-    </div>
-  </div>
 </div>
