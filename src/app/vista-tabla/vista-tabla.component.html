@@ -1,0 +1,20 @@
+<table class="table mt-3">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">Link</th>
+      <th scope="col">Fecha</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pelicula of arregloPeliculas; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ pelicula.titulo }}</td>
+      <td>{{ pelicula.categoria }}</td>
+      <td>{{ pelicula.link }}</td>
+      <td>{{ pelicula.creado | date: "short" }}</td>
+    </tr>
+  </tbody>
+</table>

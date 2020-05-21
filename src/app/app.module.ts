@@ -10,6 +10,7 @@ import { CardComponent } from "./card/card.component";
 import { PeliculaService } from "./services/pelicula.service";
 import { NavbarComponent } from './navbar/navbar.component';
 import { VistaTarjetaComponent } from './vista-tarjeta/vista-tarjeta.component';
+import { VistaTablaComponent } from './vista-tabla/vista-tabla.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { VistaTarjetaComponent } from './vista-tarjeta/vista-tarjeta.component';
     CardComponent,
     NavbarComponent,
     VistaTarjetaComponent,
+    VistaTablaComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [PeliculaService],
