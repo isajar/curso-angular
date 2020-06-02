@@ -2,7 +2,26 @@
   <form (ngSubmit)="guardar()" #formpeli="ngForm">
     <!-- Titulo -->
     <label class="font-weight-bold">Titulo* </label>
-    <input type="text" class="form-control" ngModel name="titulo" required />
+    <i
+      class="fas fa-check-circle checked"
+      *ngIf="titulo.touched && titulo.valid"
+    ></i>
+
+    <i
+      class="fas fa-exclamation-circle unchecked"
+      *ngIf="titulo.touched && titulo.invalid"
+    ></i>
+    <input
+      type="text"
+      class="form-control"
+      ngModel
+      name="titulo"
+      required
+      #titulo="ngModel"
+    />
+    <p class="alert alert-danger" *ngIf="titulo.touched && titulo.invalid">
+      Por favor escriba un titulo
+    </p>
     <br />
     <!-- Categoria -->
     <label class="font-weight-bold">Categoria*</label>
@@ -20,7 +39,7 @@
     <label class="font-weight-bold">Link*</label>
     <input type="text" class="form-control" ngModel name="link" required />
     <br />
-    <button type="submit" class="btn btn-primary">
+    <button type="submit" class="btn btn-primary" [disabled]="!formpeli.valid">
       Guardar
     </button>
   </form>
