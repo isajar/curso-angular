@@ -1,7 +1,8 @@
 // tslint:disable: quotemark
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
 import { Pelicula } from "../models/pelicula.model";
 import { PeliculaService } from "../services/pelicula.service";
+import { NgForm } from "@angular/forms";
 
 @Component({
   selector: "app-main",
@@ -10,26 +11,46 @@ import { PeliculaService } from "../services/pelicula.service";
   styleUrls: ["./main.component.css"],
 })
 export class MainComponent implements OnInit {
-  titulo: string;
-  categoria: string;
-  link: string;
+  pelicula: any;
   mensaje: string;
   arregloPeliculas: Array<Pelicula> = [];
 
-  constructor(private peliculasService: PeliculaService) {}
+  categorias = [
+    "Accion",
+    "Aventura",
+    "Ciencia Ficcion",
+    "Drama",
+    "Infantil",
+    "Otras",
+  ];
+
+  @ViewChild("formpeli") formpeli: NgForm;
+
+  constructor(private peliculasService: PeliculaService) {
+    this.pelicula = {
+      titulo: "",
+      categoria: "",
+      link: "",
+    };
+  }
 
   ngOnInit() {
     this.arregloPeliculas = this.peliculasService.getAllPeliculas();
   }
   guardar() {
+    this.pelicula.titulo = this.formpeli.value.titulo;
+    this.pelicula.categoria = this.formpeli.value.categoria;
+    this.pelicula.link = this.formpeli.value.link;
+
     this.arregloPeliculas = this.peliculasService.setPelicula(
-      this.titulo,
-      this.categoria,
-      this.link
+      this.pelicula.titulo,
+      this.pelicula.categoria,
+      this.pelicula.link
     );
-    this.resetFormulario();
+
+    this.formpeli.reset();
   }
-  resetFormulario() {
-    this.titulo = this.categoria = this.link = "";
-  }
+  // resetFormulario() {
+  //   this.titulo = this.categoria = this.link = "";
+  // }
 }

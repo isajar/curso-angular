@@ -1,21 +1,26 @@
 <div class="container">
-  <!-- Titulo -->
-  <label class="font-weight-bold">Titulo* </label>
-  <input type="text" class="form-control" [(ngModel)]="titulo" />
-  <p *ngIf="!titulo" class="text-danger">Por favor escriba un titulo!</p>
-  <br />
-  <!-- Categoria -->
-  <label class="font-weight-bold">Categoria*</label>
-  <input type="text" class="form-control" [(ngModel)]="categoria" />
-  <p *ngIf="!categoria" class="text-danger">Por favor escriba una categoria!</p>
-  <br />
-  <!-- Link -->
-  <label class="font-weight-bold">Link*</label>
-  <input type="text" class="form-control" [(ngModel)]="link" />
-  <p *ngIf="!link" class="text-danger">Por favor escriba un link!</p>
-  <br />
-
-  <button type="submit" class="btn btn-primary" (click)="guardar()">
-    Guardar
-  </button>
+  <form (ngSubmit)="guardar()" #formpeli="ngForm">
+    <!-- Titulo -->
+    <label class="font-weight-bold">Titulo* </label>
+    <input type="text" class="form-control" ngModel name="titulo" />
+    <p *ngIf="!titulo" class="text-danger">Por favor escriba un titulo!</p>
+    <br />
+    <!-- Categoria -->
+    <label class="font-weight-bold">Categoria*</label>
+    <select class="form-control" ngModel name="categoria">
+      <option value="">Seleccione una categoría</option>
+      <option *ngFor="let categoria of categorias" [value]="categoria">{{
+        categoria
+      }}</option>
+    </select>
+    <br />
+    <!-- Link -->
+    <label class="font-weight-bold">Link*</label>
+    <input type="text" class="form-control" ngModel name="link" />
+    <p *ngIf="!link" class="text-danger">Por favor escriba un link!</p>
+    <br />
+    <button type="submit" class="btn btn-primary">
+      Guardar
+    </button>
+  </form>
 </div>
