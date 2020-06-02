@@ -2,25 +2,34 @@
   <form (ngSubmit)="guardar()" #formpeli="ngForm">
     <!-- Titulo -->
     <label class="font-weight-bold">Titulo* </label>
-    <input type="text" class="form-control" ngModel name="titulo" />
-    <p *ngIf="!titulo" class="text-danger">Por favor escriba un titulo!</p>
+    <input type="text" class="form-control" ngModel name="titulo" required />
     <br />
     <!-- Categoria -->
     <label class="font-weight-bold">Categoria*</label>
     <select class="form-control" ngModel name="categoria">
       <option value="">Seleccione una categoría</option>
-      <option *ngFor="let categoria of categorias" [value]="categoria">{{
-        categoria
-      }}</option>
+      <option
+        *ngFor="let categoria of categorias"
+        [value]="categoria"
+        required
+        >{{ categoria }}</option
+      >
     </select>
     <br />
     <!-- Link -->
     <label class="font-weight-bold">Link*</label>
-    <input type="text" class="form-control" ngModel name="link" />
-    <p *ngIf="!link" class="text-danger">Por favor escriba un link!</p>
+    <input type="text" class="form-control" ngModel name="link" required />
     <br />
     <button type="submit" class="btn btn-primary">
       Guardar
     </button>
   </form>
+  <br />
+  <h4>Propiedad Dirty del Form -> {{ formpeli.controls.titulo.dirty }}</h4>
+  <h4>
+    Propiedad pristine del Form -> {{ formpeli.controls.titulo.pristine }}
+  </h4>
+  <h4>Propiedad touched del Form -> {{ formpeli.controls.titulo.touched }}</h4>
+  <h4>Propiedad valid del Form -> {{ formpeli.controls.titulo.valid }}</h4>
+  <h4>Propiedad invalid del Form -> {{ formpeli.controls.titulo.invalid }}</h4>
 </div>
