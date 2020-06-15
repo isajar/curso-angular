@@ -44,11 +44,16 @@
     </button>
   </form>
   <br />
+  <!-- Dirty: Es true cuando en el input se escribe al menos un caracter -->
   <h4>Propiedad Dirty del Form -> {{ formpeli.controls.titulo.dirty }}</h4>
+  <!-- Pristine: Es true cuando en el input no se ha escrito ningun caracter -->
   <h4>
     Propiedad pristine del Form -> {{ formpeli.controls.titulo.pristine }}
   </h4>
+  <!-- Touched: Es true cuando saco el foco del input. Esto implica que en un momento se hizo foco en el campo -->
   <h4>Propiedad touched del Form -> {{ formpeli.controls.titulo.touched }}</h4>
+  <!-- Valid es true cuando cumple la condicion del validador que le pusimos al input -->
   <h4>Propiedad valid del Form -> {{ formpeli.controls.titulo.valid }}</h4>
+  <!-- Invalid es  true cuando no cumple la condicion del validador que le pusimos al input   -->
   <h4>Propiedad invalid del Form -> {{ formpeli.controls.titulo.invalid }}</h4>
 </div>
