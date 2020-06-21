@@ -1,0 +1,48 @@
+<div class="container">
+  <form (ngSubmit)="onSubmit()" [formGroup]="libroForm">
+    <!-- Titulo -->
+    <label class="font-weight-bold">Titulo* </label>
+    <i
+      class="fas fa-check-circle checked"
+      *ngIf="
+        libroForm.controls.titulo.touched && libroForm.controls.titulo.valid
+      "
+    ></i>
+
+    <i
+      class="fas fa-exclamation-circle unchecked"
+      *ngIf="
+        libroForm.controls.titulo.touched && libroForm.controls.titulo.invalid
+      "
+    ></i>
+    <input type="text" class="form-control" formControlName="titulo" />
+    <p
+      class="alert alert-danger"
+      *ngIf="
+        libroForm.controls.titulo.touched && libroForm.controls.titulo.invalid
+      "
+    >
+      Por favor escriba un titulo
+    </p>
+    <br />
+    <!-- Categoria -->
+    <label class="font-weight-bold">Categoria*</label>
+    <select class="form-control" formControlName="categoria">
+      <option value="">Seleccione una categoría</option>
+      <option *ngFor="let categoria of categorias" [value]="categoria">{{
+        categoria
+      }}</option>
+    </select>
+    <br />
+    <!-- Link -->
+    <label class="font-weight-bold">Link*</label>
+    <input type="text" class="form-control" formControlName="link" />
+    <br />
+    <button type="submit" class="btn btn-primary" [disabled]="!libroForm.valid">
+      Guardar
+    </button>
+  </form>
+  <br />
+  <pre> {{ libroForm.value | json }}</pre>
+  <pre> {{ libro | json }}</pre>
+</div>

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { MainComponent } from "./main/main.component";
 import { VistaTarjetaComponent } from "./vista-tarjeta/vista-tarjeta.component";
 import { VistaTablaComponent } from "./vista-tabla/vista-tabla.component";
+import { LibroaddComponent } from "./libroadd/libroadd.component";
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: "tabla",
     component: VistaTablaComponent,
+  },
+  {
+    path: "libro-add",
+    component: LibroaddComponent,
   },
 ];
 
