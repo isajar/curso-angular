@@ -8,13 +8,12 @@
 
 0. Crear una nueva rama.
 1. Crear un componente para cargar libros.
-2. Crear una clase libro en el modelo.
-3. Agregar ReactiveFormsModule en app.module.
-4. Agregar Ruta y actualizar navBar.
-5. Agregar clases ReactiveForms, FormGroup y FormBuilder en el componente.
-6. Agregar clases Css para validadores (sacar de la clase pasada).
-7. Ver mas validators
-8. Ayuda para usuario.
+2. Agregar ReactiveFormsModule en app.module.
+3. Agregar Ruta y actualizar navBar.
+4. Agregar clases ReactiveForms, FormGroup y FormBuilder en el componente.
+5. Agregar clases Css para validadores (sacar de la clase pasada).
+6. Ver mas validators
+7. Ayuda para usuario.
 
 ## Observaciones:
 
