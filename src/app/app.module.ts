@@ -12,7 +12,8 @@ import { NavbarComponent } from "./navbar/navbar.component";
 import { VistaTarjetaComponent } from "./vista-tarjeta/vista-tarjeta.component";
 import { VistaTablaComponent } from "./vista-tabla/vista-tabla.component";
 import { LibroaddComponent } from "./libroadd/libroadd.component";
-
+import { HttpClientModule } from "@angular/common/http";
+import { UserComponent } from './user/user.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,8 +25,15 @@ import { LibroaddComponent } from "./libroadd/libroadd.component";
     VistaTarjetaComponent,
     VistaTablaComponent,
     LibroaddComponent,
+    UserComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [PeliculaService],
   bootstrap: [AppComponent],
 })

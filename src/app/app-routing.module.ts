@@ -4,6 +4,7 @@ import { MainComponent } from "./main/main.component";
 import { VistaTarjetaComponent } from "./vista-tarjeta/vista-tarjeta.component";
 import { VistaTablaComponent } from "./vista-tabla/vista-tabla.component";
 import { LibroaddComponent } from "./libroadd/libroadd.component";
+import { UserComponent } from "./user/user.component";
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: "libro-add",
     component: LibroaddComponent,
+  },
+  {
+    path: "users",
+    component: UserComponent,
   },
 ];
 
